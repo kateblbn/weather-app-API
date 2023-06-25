@@ -1,0 +1,13 @@
+@import "./location.css";
+@import "./footer.css";
+
+body, html, p {
+    box-sizing: border-box;
+font-size: 20px;
+    margin: 0;
+    padding: 0;
+}
+body {
+    background: linear-gradient(rgb(123, 123, 235), rgb(243, 243, 75));
+
+}

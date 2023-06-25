@@ -1,0 +1,14 @@
+.footer {
+    display: flex;
+    padding: 50px 0;
+}
+.one-line {
+    margin-right: 35px;
+    display: flex;
+}
+img {
+    width: 50px;
+}
+.wind {
+    padding-left: 5px;
+}
