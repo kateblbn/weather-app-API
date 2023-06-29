@@ -49,9 +49,9 @@ function getData(x) {
                 <div class="celsius">℃</div>
             </div>
             <div class="weather__temp-max-min">
-                <span class="min">${cels_min}</span>
+                <span class="min">${cels_min}</span>℃
                 <div class="between">/</div>
-                <span class="max">${cels_max}</span>
+                <span class="max">${cels_max}</span>℃
             </div>    
       </div>
       <div class="footer">
