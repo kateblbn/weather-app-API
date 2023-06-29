@@ -2,24 +2,28 @@ const btn = document.querySelector('.btn');
 const searchInfo = document.querySelector('.search__info');
 const weather = document.querySelector('.weather');
 
-let city = 'Oslo';
+// let city = 'Oslo';
+// let x;
 
 btn.addEventListener('click', show)
 function show() {
       let value = searchInfo.value;
-      const x = city == value ? city : "Oslo"; 
+      let x =  value ? value : "Oslo"; 
       console.log(x);
-      app();
+      getData(x);
 }
-
-
-const urlApi = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=d8ca3dee9cfd841abd4b1935d6985b69`;
-
-fetch(urlApi)
+//вызов функции в которую нужно передать параметром.
+show()
+function getData(x) {
+      const urlApi = `https://api.openweathermap.org/data/2.5/weather?q=${x}&appid=d8ca3dee9cfd841abd4b1935d6985b69`;
+      fetch(urlApi)
       .then(response => response.json())
       .then(json => app(json)  )
+}
+//вызов функции с помощью другой фенкции
 
-      function app(json) {
+      function app(json) { 
+      
       console.log(json);
       let cels = Math.round(json.main.temp - 273.15);
       let cels_min = Math.round(json.main.temp_min - 273.15);
@@ -31,6 +35,7 @@ fetch(urlApi)
 
      let template = `
       <div class="wrapper">
+            <div class="background"></div>
             <div class="weather__location">
                 <i class="fa-solid fa-location-dot"></i>
                 <span class="location">${json.name}</span>
@@ -78,7 +83,6 @@ fetch(urlApi)
       `
 weather.innerHTML = template;
 
-      
 }
 
 
