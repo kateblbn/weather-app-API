@@ -39,7 +39,7 @@ function getData(x) {
                 <span class="location">${json.name}</span>
             </div>
             <div class="weather__img">
-                <img src="../img/${json.weather[0].icon}.png" alt="${json.weather[0].main}" class="icons">
+                <img src="./img/${json.weather[0].icon}.png" alt="${json.weather[0].main}" class="icons">
                 <span class="descr-img">${json.weather[0].description}</span>
             </div>
             <div class="weather__temp">
